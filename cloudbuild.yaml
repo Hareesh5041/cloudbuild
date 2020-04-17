@@ -26,7 +26,8 @@ steps:
   - |
      sed "s/GOOGLE_CLOUD_PROJECT/${PROJECT_ID}/g" deploy.yaml.tpl | \
      sed "s/COMMIT_SHA/${SHORT_SHA}/g" > deploy.yaml
-  
+
+#This step deploys your image in kubernetes cluster specfied in below env
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy
   args:
