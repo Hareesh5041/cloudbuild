@@ -7,7 +7,7 @@ MAINTAINER srinath_reddy
 RUN apt-get update
 
 # Install and run apache
-RUN apt-get install -y apache2 && apt-get clean
+RUN apt-get install -y apache2
 COPY index.html /var/www/html/
 
 EXPOSE 80
